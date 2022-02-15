@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="only login.css">
+    <link rel="stylesheet" href="use.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,700&family=Karla:wght@300&family=Patrick+Hand&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
+    <title>moblie shop</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #main-section{
+            width:100%;
+            height:789px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-color:rgb(203, 231, 238);
+        }
+        .slid-img{
+            height: 240px;
+            position: absolute;
+            top:180px;
+            left: 0;
+        }
+
+        #main-section  img{
+            position:relative;
+
+        }
+        #header-part{
+            width:100%;
+            height:70px;
+            padding: 12px 0 ;
+            background: linear-gradient(171deg, rgb(25, 232, 170) 0%, rgba(54,185,195,0.9864320728291317) 46%, rgba(38,212,180,1) 99%);
+            position: absolute;
+            top:0;
+       
+        }
+        .logo{
+            width:25%;
+            height:100%;
+           line-height: 60px ;
+            float: left;
+        }
+        .logo img{
+            width:50%;
+            height:50px;
+
+
+        }
+        .search{
+            width:50%;
+            height:100%;
+           
+            float: left;
+            line-height: 35px;
+            text-align: center;
+        }
+        .search input{
+            width:80%;
+            height: 45px;
+            padding:5px 10px;
+            font-size:16px;
+            border-radius: 5px;
+            color: rgb(0, 0, 0);
+            border:none;
+            
+            border:1px solid rgb(34, 155, 192);
+            background-color:rgb(255, 255, 255) ;
+          
+        }
+        .search input:focus{
+            box-shadow:1px 1px 4px 4px rgb(92, 143, 185) ;
+            color: rgb(0, 0, 0);
+            outline: none;
+            font-family:Arial, Helvetica, sans-serif;
+            
+        }
+        .login{
+            width:25%;
+            height:100%;
+            float: left;
+            
+        }
+        .login div i{ 
+            margin: 0 20px;
+        }
+        .login .login-button button{
+            text-decoration: none;
+            font-size:20px;
+            font-weight: 700;
+            font-family: 'Rubik', sans-serif;
+            color: rgb(4, 63, 58);
+            background-color: transparent; border:none ;
+            box-shadow: none;
+            margin:10px 50px ;
+        }
+        .cancelbtn span a{
+    
+    text-decoration: underline;
+    margin:0;
+    color: rgb(211, 0, 0);
+
+}
+        .s{
+            color:#079ba8;
+        }
+        #nav-part{
+            width:100%;
+            height:40px;
+            position: absolute;
+            top:70px;
+            background-color: rgba(0, 0, 0, 0.712);
+        }
+        .nav-part-div-left{
+            width:7%;
+            height: 100%;
+            float: left; 
+            line-height:40px;
+        }
+        .nav-part-div-left i{
+            font-size:25px;
+            text-decoration: none;
+            margin:0 5px;
+            color: rgb(183, 230, 235);
+        }
+        .nav-part-div-left a{
+            font-size:25px;
+            text-decoration: none;
+            margin:0 5px;
+            color: rgb(183, 230, 235);
+        }
+        .nav-part-div-right{
+            width:25%;
+            text-align:center ;
+            height: 100%;
+            float:right ;
+            border-bottom-left-radius:30px ;
+            font-family: 'opne sans', sans-serif;
+            background-color: rgb(31, 98, 100);
+            padding-bottom: 6px;
+            box-sizing: border-box;
+            box-shadow:2px 1px 4px black ;
+        }
+        .nav-part-div-right img{
+            width:100px;
+            height:100%;
+        }
+        .nav-part-div-right a{
+            font-size: 28px;
+            color: rgb(223, 168, 19);
+            text-decoration:none ;
+           margin:0 0 5px;
+        }
+       
+        #nav-part div a{
+            padding:0 10px;border:1px solid rgba(246, 214, 171, 0) ;
+        }
+         #nav-part div a:hover{
+            border:1px solid rgb(171, 246, 234) ;
+            border-radius:5px;
+        }
+        #nav-part ul{
+            width:67%;
+            height: 100%;
+            float:left ;
+            list-style-type: none;
+           
+        }
+        #nav-part ul li{
+            float: left;
+        }
+        #nav-part ul li a{
+            font-size:19px;
+            color: rgb(246, 236, 217);
+            text-decoration: none;
+            line-height:40px ;
+            padding:5px 10px;
+            margin:0 ;
+            font-family: 'Rubik', sans-serif;
+            border:1px solid rgba(0, 0, 0, 0) ;
+            border-radius:5px;
+        }
+        #nav-part ul li a:hover{
+            border-radius:5px;
+            background: linear-gradient(180deg, rgba(6,6,6,1) 0%, rgba(124,121,121,0.9864320728291317) 47%, rgba(0,0,0,1) 99%);
+        }
+        .landing-part1{
+            background-color: #079ba8;
+            height:14%;
+        }
+        .landing-part2{
+            background-color: blueviolet;
+            height:69%;
+            box-sizing: border-box;
+        }
+        .landing-part3{
+            height:27%;
+            background-color:rgb(238, 236, 236);
+            box-sizing: border-box;
+        }
+        .video{
+           visibility: hidden;
+      
+        }
+        #i-phone .lok{
+            width:18%;
+            height:100%;
+            margin:0 13px;
+            background-color:rgba(36, 18, 27, 0.431) ;
+            float: left;
+            text-align: center;
+            border-radius: 20px;box-shadow:1px 1px 10px black ;
+           
+        }
+        #i-phone .flip-card-apple-front i{
+            color:rgb(206, 150, 20);
+            font-size:90px;
+            margin-top:5px;
+        }
+        .flip-card-apple{
+            width:18%;
+            height:100%;
+            background-color: transparent;
+            perspective: 1000px;
+            margin:0 13px;
+            float: left;
+         }
+        .flip-card-apple-inner{
+            position: relative;
+            width:100%;
+            height:100%;
+            text-align: center;
+            transition:transform 0.8s;
+            transform-style:preserve-3d;
+
+            }
+        .flip-card-apple:hover .flip-card-apple-inner{
+            transform:rotateY(180deg);
+        }
+        .flip-card-apple-front,.flip-card-apple-back{
+            position:absolute;
+            width:100%;
+            height:100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+        }
+        .flip-card-apple-front{
+            background: linear-gradient(171deg, rgb(25, 232, 170) 0%, rgba(54,185,195,0.9864320728291317) 46%,
+             rgba(38,212,180,1) 99%);
+            border-radius: 20px;
+        }
+        .flip-card-apple-back{
+            background-color:rgb(12, 6, 9) ;
+            border-radius: 20px;
+         
+            color:wheat;
+            transform: rotateY(180deg);
+      
+        }
+        .flip-card-apple-back h1{
+            height:100%;
+            line-height:100px ;
+            font-size:35px;
+        }
+         #i-phone .flip-card-apple-front img{
+            width:60%;
+            height: 100px;
+         }
+ /* section-2 start */
+        #section-2{
+            width:100%;
+            height:620px;
+            padding:20px 0 0;
+            background-color:rgba(240, 240, 240, 0.959) ;
+        }
+        #section-2 h1{
+            height:10%;
+            text-align: center;
+            
+            font-size:40px;
+        }
+        #sec2-container{
+            width: 100%;
+            height:90%;
+        }
+        .sec2-part-1{
+            background: linear-gradient(174deg, rgba(126,223,223,1) 21%, rgba(157,241,206,0.9528186274509804) 52%, rgba(157,241,167,0.9192051820728291) 88%);
+            width:100%;
+            height: 48%;
+            margin-bottom:10px ;
+            padding-bottom: 10px;
+            border: 1px solid rgb(5, 200, 191);
+
+        }
+        .sec2-part-2{
+            background: linear-gradient(63deg, rgba(126,223,223,1) 21%, rgba(157,241,206,0.9528186274509804) 52%, rgba(157,241,167,0.9192051820728291) 88%);
+            width:100%;
+            height: 48%;
+            padding-bottom: 10px;
+            border: 1px solid rgb(5, 200, 191);
+        }
+        .sec2-header1{
+            width:100%;
+            height:20%;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 900;
+            background: transparent;
+            color: rgba(2, 36, 41, 0.904);
+            
+        }
+        #product-1{
+            width:100%;
+            height:80%;
+            background: transparent;
+        }
+        .product{
+            width:13.3%;
+            background-color: rgb(246, 246, 245);
+            height:100% ;
+            float: left;
+            margin-left: 12px;
+            border-radius: 10px;
+            
+        }
+        .product:hover{
+            box-shadow: 2px 2px 10px rgb(17, 62, 80);
+        }
+        .product  .smart-p{
+            width: 100%;
+            height:65% ; display: block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .detail{
+            width: 100%;
+            height:35% ;
+            background-color: rgb(255, 255, 255);
+            display: block;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        p{
+            width:100%;
+            height:33% ;
+            font-size: 16px;
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            
+        }
+        p:nth-child(2){
+            color: rgb(64, 144, 91);
+        }
+/* section-2 header part*/
+        .pro-name{
+            width: 50%;
+            height:100%;
+        
+            font-size: 22px;
+            float: left;
+            padding-left: 10px;
+           line-height: 50px;
+        }
+        .see-more{
+            width: 50%;
+            height:100%;
+           
+            float:right;
+            line-height: 50px;
+        }
+        .see-more a{
+            text-decoration: none;
+            font-size: 22px;
+            float: right;
+            padding-right: 50px;
+        }
+        /* section-2 header part-end*/
+        .section-2-container{
+            width:100%;
+            height:85%;
+            background-color: transparent;
+            padding:20px 120px ;
+
+        }
+        .section-2-part1{
+            width:21%;
+            height:100% ;
+            float: left;
+            margin:0 22px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+        .section-2-part1 img:hover{
+            width: 105%;
+            height: 105%;
+            overflow: hidden;
+            transition:1s;cursor: pointer;
+        }
+     
+  /* slide navigation*/
+   .fa{
+     color:rgb(0, 0, 0);
+     cursor: pointer;
+     font-size: 30px;
+   }
+   .slide-nav{
+     height: 720px;
+     width:0;
+     position: absolute;
+     z-index:1;
+     top:0;
+     left: 0;
+     background-color: rgb(19, 17, 17);
+     opacity: 0.9;
+     overflow-x: hidden;
+     padding-top: 30px;
+     transition: 0.5s;
+   
+   }
+   .slide-nav ul{
+       display: block;
+   }
+   .slide-nav ul li{
+       width: 100%;
+       display: block;
+       border: 1px solid red;
+   }
+   .slide-nav a{
+     padding: 10px 10px 10px 30px;
+     text-decoration: none;
+     font-size: 22px;
+     color: rgb(255, 255, 255);
+     display: block;
+     transition: 0.3s;
+   }
+   .slide-nav a:hover{
+     color:#fff;
+ 
+   }
+   .slide-nav .btn-close{
+     position: absolute;
+     top: 0;
+     right: 22px;
+     font-size: 36px;
+     margin-left: 50px;
+     color: red;
+
+   }
+
+   #i-phone{
+            color: rgb(138, 241, 226);
+            width:100%;
+            height:120px;
+            position:absolute;
+           top:420px;
+            border-radius: 0;
+            background-color: rgb(211, 249, 250);
+            padding:10px 0;
+            box-sizing: border-box;
+            box-shadow: 1px -2px 10px black;
+            
+        } 
+         #offerdiv{
+             width:100%;
+             height: 70px;
+             position:absolute;
+             top:110px;
+             left:0;
+             background-color: rgb(211, 249, 250);
+             box-shadow: -1px 3px 5px rgb(59, 59, 59);
+     
+
+         }
+         #offerdiv .cust{
+             width: 15%;
+             float: left;
+             height: 100%;
+             text-align: left;
+           
+         }
+         #offerdiv .cust-1{
+            width: 10%;
+             float: left;
+             height: 90%;
+             text-align: right;
+             line-height: 70px;
+             font-size: 25px;
+         }
+         #offerdiv .cust img{
+            width:30%;
+            display: block;
+            margin: 5px 5px 5px 5px;
+         }
+         
+         /* product*/
+         #Products{
+             width:100%;
+             height:290px;
+             position: absolute;
+             top:550px ;
+             left:0;
+             padding-left: 10px;
+          
+         }
+     
+         #Products #Products-cont{
+            width: 100%;
+            height:80%;
+            display: block;
+            padding-bottom:10px;
+         }
+         #Products-cont .Products1{
+             width:20%;
+             height: 100%;
+             float: left;
+            
+         }
+         .Products1-cont{
+             width: 90%;
+             height: 100%;
+             margin:0 5px;
+             border-radius: 10px;
+             
+         }
+         .Products1-cont:hover{
+            box-shadow: 3px 1px 15px rgb(103, 128, 136);
+
+         }
+         .Products1-cont img{
+             width:100%;
+             height:80%;
+            display: block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+         }
+         .Products1-cont h3{
+            width:100%;
+            height:10%;
+            display: block;
+            font-size:20px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+         
+         }
+         .Products1-cont p{
+            width:100%;
+             height:10%;
+            display: block;
+            font-size:20px ;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius:10px ;
+            background-color: rgb(255, 255, 255);
+            
+         }
+/*order -desctop viwe*/
+        #orderdiv{
+            visibility: hidden;
+             width:100%;
+             height:60px;
+             background-color: rgb(4, 50, 56);
+             position: fixed;
+             bottom:0;
+             left: 0;
+             border-top-left-radius: 5px;
+             border-top-right-radius: 5px;
+             box-shadow: -1px -1px 5px black;
+         }
+         #orderdiv .orderdiv1{
+             width:25%;
+             height: 100%;
+            float:left; 
+            text-align: center; 
+            line-height:60px ;  border-top: 2px solid rgb(7, 142, 155);        
+         }
+         .orderdiv1 img{
+             width:80%;
+             height: 80%;
+             margin: 10px;
+            
+         }
+         
+/* section-3 start */
+         #section-3{
+            width:100%;
+            height:550px;
+            padding: 0;
+            background-color:rgb(238, 238, 238) ;
+         }
+         .smart-phone{
+             width: 70%;
+             height:65% ;
+            display: block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+         }
+
+/* section-3  end*/
+/* section-4 start */
+        #section-4{
+            width:100%;
+            height:550px;
+            padding: 0;
+            
+            background-color:rgb(235, 235, 235) ;
+         }
+         #sec3-container{
+             height: 100%;
+
+         }
+
+/* section-4  end*/
+
+
+
+
+
+
+
+
+    /* For mobile phones: */
+    @media only screen and (max-width: 800px) {
+        #main-section{
+            width: 100%;
+
+            height:650px ;
+            background-color:rgba(189, 236, 232, 0.993) ;
+        }
+        .slid-img{
+            height: 200px;
+            position: absolute;
+            top:190px;
+            left: 0;
+        }
+        #header-part{
+            height:120px ;
+            background: linear-gradient(171deg, rgba(25,137,232,1) 0%, rgba(54,185,195,0.9864320728291317) 46%, rgba(38,212,180,1) 99%);
+        }
+        .logo{
+            width:100%;
+            height:50px;
+            float: none;
+           line-height: 60px ;
+            display: block;
+            padding-left:55px ;
+        }
+        .logo img{
+            width:150px;
+            height: 30px;
+        }
+        
+        .search{
+            width: 100%;
+            height:50px;
+          display: block;
+         
+          
+        }
+        .search input{
+            width:95%;
+            height: 45px;
+            border-radius:0;
+            border:1px solid rgb(34, 155, 192);
+            background-color:rgb(255, 255, 255) ;
+        }
+        .login{
+        width: auto;
+            position: absolute;
+            top:20px;
+            right:15px;
+        }
+        .login .login-button button{
+            margin: 0;
+            float: none;
+            font-size: 16px;
+            font-weight: 300;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(0, 0, 0);
+        }
+        .login div i{ 
+            margin: 0 7px;
+        }
+        .login-button button i{
+            color: rgb(255, 255, 255);
+        }
+        #nav-part{
+            width:100%;
+            height:40px;
+            position: absolute;
+            top:9px;
+            background-color:transparent;
+        }
+        .nav-part-div-left i{
+            color: rgb(255, 255, 255);
+            font-size: 21px;
+        }
+       .navpart-header{
+            visibility: hidden;
+        }
+        .nav-part-div-right{
+            visibility: hidden;
+        }
+        .video{
+            width: 100%;
+            height: 480px;
+            visibility: visible;
+            position: absolute;
+            top:120px;
+            left:0;
+            background-color: rgb(224, 224, 224);
+
+        }
+        #i-phone{
+            color: rgb(138, 241, 226);
+            width:100%;
+            height:78px;
+            position:absolute;
+           top:400px;
+            border-radius: 0;
+        
+            padding:10px 0;
+            box-sizing: border-box;
+            
+        }
+         .brand{
+             position: absolute;
+             top:390px;
+             left:0;
+             line-height:30px;
+            font-size: 18px;
+            width: 100%;
+            height:30px;
+            display: block;
+            color: rgb(10, 11, 70);
+            text-align: center;
+            
+        }  
+            #i-phone .lok{
+            width:18%;
+            height:100%;
+            margin:0 11px;
+            background-color:transparent ;
+            float: left;
+            text-align: center;
+            border-radius: 10px;
+       box-shadow: none;
+           
+        }
+       
+        .flip-card-apple-front{
+            background-color:rgba(255, 255, 255, 0.993) ;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+
+        .flip-card-apple-front,.flip-card-apple-back{
+            position:absolute;
+            width:90%;
+            height:100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;}
+
+        .flip-card-apple{
+            width:20%;
+            height:100%;
+            perspective: 1000px;
+            margin:0 ;
+            float: left;border-radius:8px ;
+         }
+         .flip-card-apple-inner{
+            width:100% ;
+            height: 100%;
+            margin-left:5PX;
+         }
+         #i-phone .flip-card-apple-front i{
+            color:rgb(206, 150, 20);
+            font-size:35px;
+            margin-top:5px;
+        }
+         .flip-card-apple-back h1{
+            height: 90%;
+            line-height:60px ;
+            font-size:18px;
+            visibility: hidden;
+        }
+         #i-phone .flip-card-apple-front img{
+            width:90%;
+            height: 90%;
+
+         }
+         #offerdiv{
+             width:100%;
+             height: 70px;
+             position:absolute;
+             top:120px;
+             left:0;
+            box-shadow: -1px -1px 10px black;
+
+         }
+         #offerdiv .cust{
+             width: 25%;
+             float: left;
+             height: 100%;
+             text-align: center;
+           
+         }
+         #offerdiv .cust-1{
+             visibility: hidden;
+             width: 0;
+         }
+         #offerdiv .cust img{
+            width:50%;
+            height:50% ;
+            display: block;
+            margin: 18px 5px 5px 25px;
+         }
+         #offerdiv .cust p{
+            width:100%;
+            height:20% ;
+            font-size: 15px;
+            text-align: center;
+            display: block;
+         }
+         /* product*/
+         #Products{
+             width:100%;
+             height:190px;
+             position: absolute;
+             top:490px ;
+             left:0;
+            
+         }
+         #Products h2{
+          
+            line-height:30px;
+            font-size: 16px;
+            width: 100%;
+            height:20%;
+            display: block;
+            color: rgb(10, 11, 70);
+            text-align: center;
+         }
+         #Products #Products-cont{
+            width: 100%;
+            height:80%;
+            display: block;
+            padding-bottom:10px;
+         }
+         #Products-cont .Products1{
+             width:20%;
+             height: 100%;
+             float: left;
+             border-radius: 10px;
+           
+         }
+         .Products1-cont{
+             width: 90%;
+             height: 100%;
+             margin:0 5px;
+             border-radius: 10px;
+             box-shadow: 3px 1px 15px rgb(103, 128, 136);
+         }
+         .Products1-cont img{
+             width:100%;
+             height:70%;
+            display: block;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+         }
+         .Products1-cont h3{
+            width:100%;
+             height:15%;
+            display: block;
+            font-size: 14px;
+            text-align: center;
+            background-color: rgb(255, 255, 255);
+         
+         }
+         .Products1-cont p{
+            width:100%;
+             height:15%;
+             color:rgb(92, 172, 12);
+            display: block;
+            font-size:12px ;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            
+         }
+         /*order*/
+         #orderdiv{
+            visibility: visible;
+             width:100%;
+             height:60px;
+             background-color: rgb(4, 50, 56);
+             position: fixed;
+             bottom:0;
+             left: 0;
+             border-top-left-radius: 5px;
+             border-top-right-radius: 5px;
+             box-shadow: -1px -1px 5px black;
+         }
+         #orderdiv .orderdiv1{
+             width:25%;
+             height: 100%;
+            float:left; 
+            text-align: center; 
+            line-height:60px ;  border-top: 2px solid rgb(7, 142, 155);        
+         }
+         .orderdiv1 img{
+             width:50%;
+             height: 50%;
+             margin: 10px;
+            
+         }
+    /*second section mobile viwe*/
+         #section-2{
+            width:100%;
+            height:2450px;
+            padding:20px 0 0;
+            background-color:rgba(240, 240, 240, 0.959) ;
+        }
+        .sec2-on-1{
+            background: linear-gradient(174deg, rgba(126,223,223,1) 21%, rgba(157,241,206,0.9528186274509804) 52%, rgba(157,241,167,0.9192051820728291) 88%);
+            width:100%;
+            height: 50.6%;
+            margin-bottom:10px ;
+            padding-bottom: 10px;
+            display: block;
+            border: 1px solid rgb(5, 200, 191);
+
+        }
+        .sec2-on-1{
+            width:100%;
+            height: 50.6%;
+            padding-left:4px ;
+            padding-right: 4px;
+            box-sizing: border-box;
+            display: block;
+        }
+        .sec2-header1{
+            width:100%;
+            FONT-WEIGHT: 500;
+            height: 5%;
+            
+        }
+        #section-2 h1{
+            height:3%;
+            text-align: center;
+            
+            font-size:40px;
+        }
+        #sec2-container{
+            width: 100%;
+            height:95%;
+        }
+        .product{
+            width:98%;
+            height:150px;
+            margin-bottom:8px;
+            margin-left: 4px;
+        
+        }
+        .product .detail{
+            width:50%;
+            height: 100%;
+            float: right;
+            
+        }
+        .product-img-cent{
+            width: 50%;
+           float: left;
+           height:230px;
+        }
+        .pro-name {
+    
+    font-size: 18px;
+    }
+    .see-more a {
+        font-size: 18px;}
+    
+        .product .smart-p {
+    float: left;
+    width: 50%;
+    height: 98%;
+        }
+ 
+/* section3*/
+        #section-3,#section-4{
+            height: 2400px;
+           
+        }
+        .sec3-part1{
+            height: 49%;
+        }
+        .detail p{
+            line-height: 60px;
+        }
+
+
+    }
+    </style>
+    <script language="javascript">
+                MyBanners=new Array('banner1.jpg','banner2.png','banner3.jpg','banner4.jpg','banner5.jpg','banner6.jpg');
+                banner=0
+                function showBanners()
+                {
+                    if(document.images)
+                    {
+                        banner++
+                        if(banner==MyBanners.length){
+                            banner=0
+                        }
+                        document.Changebanner.src=MyBanners[banner]
+                        setTimeout("showBanners()",2000)
+                    }
+                }
+            </script>
+    
+</head>
+<body onload="showBanners()">
+    <!--main section start now-->
+    <section id="main-section">
+         <center>
+                <img  class="slid-img" src="banner1.jpg" width="100%" height="789px" name="Changebanner">
+                
+            </center>
+          
+        <div id="header-part">
+            <div class="logo">
+                <img src="ShopClues.png">
+            </div>
+            <div class="search">
+                <input  type="search" placeholder="Search for Products, Brands and More">
+            </div>
+            <div class="login">  
+                    <div class="login-button">
+                        
+                        <button onclick="document.getElementById('id01').style.display='block'" 
+                        ><i class="fas fa-users" ></i>Login</button>
+                    </div>
+                    <section class="modal" id="id01">  
+                        <div class="form-container animate"  >
+                            <div class="form-container-part1 fcp">
+                        
+                                <span onclick="document.getElementById('id01').style.display='none'"
+                         class="close" title="Close Modal">&times;</span>
+                                <img src="boy-png-29779.png" style="width:250px;height: 550px;margin-left: 100px;">
+                            </div>
+                            <div class="form-container-part2 fcp">
+                                <form class="modal-content animate" action="storedocument.php" method="POST" enctype = "multipart/form-data">
+                                    <div class="u-img">
+                                        <img src="user.png">
+                                    </div>
+                                    <div id="logindiv">
+                                        <div class="inpute-can">
+                              
+                                            <input type="text" name="fname" required placeholder="Login Email / Phone No."> 
+                                        </div>
+                                        <div class="inpute-can">
+                                   
+                                            <input type="email" required placeholder="Password">
+                                        </div>
+                                    </div>
+                                    <button class="butsub" type="submit" name = "submit">Login Now</button>
+                                    <div class="container" >
+                                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                        <span class="psw">Forgot <a href="#">password?</a></span>
+                                 
+                                        <span ><a style="padding:0 20px;color:rgb(2, 44, 44);text-decoration: none;font-size: 25px;" href="user login.html"> New Registration</a></span>
+                                       </div>
+                
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('id01'); 
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                     </script>
+                
+            </div>
+        </div>
+        <div id="nav-part">
+            <div class="nav-part-div-left " onclick="openSlideMenu()"><a href="#"><i class="fas fa-bars"></i></a></div>
+            <div id="side-menu" class="slide-nav">
+                <ul>
+                    <li><a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a></li>
+                    <li><a href="#">Mobiles</a></li>
+                    <li><a href="#">Charger</a></li>
+                    <li><a href="#">Tempered Glass</a></li>
+                    <li><a href="#">Power Bank</a></li>
+                    <li><a href="#">Headphone & Earphone </a></li>
+                    <li><a href="#">Memory Card</a></li>
+                    <li><a href="#">Bluetooth</a></li>
+                    <li><a href="#">Power Bank</a></li>
+            </ul>
+            
+              </div>
+              <script>
+                function openSlideMenu(){
+                  document.getElementById('side-menu').style.width='250px';
+                  document.getElementById('main').style.marginLeft='250px';
+              
+                }
+                function closeSlideMenu(){
+                  document.getElementById('side-menu').style.width='0';
+                  document.getElementById('main').style.marginLeft='0';
+              
+                }
+                </script>
+                <div class="navpart-header">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Best Products</a></li>
+                <li><a href="#">Mobiles</a></li>
+                <li><a href="#">Accessories </a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="#">Today's deals</a></li>
+            </ul></div>
+            <div class="nav-part-div-right"><img src="Diya.png"><a href="#"> Festival Special</a></div>
+        </div>
+        <!-- offer-->
+        <div id="offerdiv" style="font-family: 'Karla', sans-serif ;font-weight: 900;color: rgb(33, 160, 128);">
+            <div class="cust-1">
+               Offer
+            </div>
+            <div class="cust">
+               <img src="offer.png">
+              
+            </div>
+            <div class="cust-1">
+                Reward
+                
+            </div>
+            <div class="cust">
+                <img src="reward .png">
+               
+            </div>
+            <div class="cust-1">
+              Service
+                
+            </div>
+            <div class="cust">
+              <img src="service.png">
+                
+            </div>
+            <div class="cust-1">
+               Compare
+            </div>
+            <div class="cust">
+                <img src="compare.png">
+                
+            </div>
+        </div>    
+        <div id="i-phone">
+            <!--flip card -->
+             
+            <div class="flip-card-apple">
+                <div class="flip-card-apple-inner">
+                    <div class="flip-card-apple-front">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <div class="flip-card-apple-back">
+                        <h1>shop now</h1>
+                    </div>
+                </div>
+            </div>
+            <!--samsung-->
+            <div class="flip-card-apple">
+                <div class="flip-card-apple-inner">
+                    <div class="flip-card-apple-front">
+                        <img src="samsung.png">
+                    </div>
+                    <div class="flip-card-apple-back">
+                        <h1>shop now</h1>
+                    </div>
+                </div>
+            </div>
+               <!--huawei--> 
+            <div class="flip-card-apple">
+                <div class="flip-card-apple-inner">
+                    <div class="flip-card-apple-front">
+                         <img src="huawei.png">
+                    </div>
+                    <div class="flip-card-apple-back">
+                        <h1>shop now</h1>
+                    </div>
+                </div>
+            </div>
+            <!--Xiaomi-->
+            <div class="flip-card-apple">
+                <div class="flip-card-apple-inner">
+                    <div class="flip-card-apple-front">
+                        <img src="xiaomi.png">
+                    </div>
+                    <div class="flip-card-apple-back">
+                        <h1>shop now</h1>
+                    </div>
+                </div>
+            </div>
+            <!--oppo-->
+            <div class="flip-card-apple">
+                <div class="flip-card-apple-inner">
+                    <div class="flip-card-apple-front">
+                        <img src="oppo.png" >
+                    </div>
+                    <div class="flip-card-apple-back">
+                        <h1>shop now</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+
+<!--products-->
+        <div id="Products">
+            <div id="Products-cont">
+
+                <div class="Products1">
+                    <div class="Products1-cont">
+                        <img src="th (24).jpg">
+                        <h3>iphone </h3>
+                        <p> from- 24999/-</p>
+                    </div>
+                </div>
+                <div class="Products1">
+                    <div class="Products1-cont">
+                        <img src="earphone-sin.jpg">
+                        <h3>mobile</h3>
+                        <p>from- 7999/-</p>
+                    </div>
+                </div>
+                <div class="Products1">
+                    <div class="Products1-cont">
+                        <img src="6headphone_.jpg">
+                        <h3>Headphone</h3>
+                        <p>From- 499/-</p>
+                    </div>
+                </div>   
+                <div class="Products1">
+                    <div class="Products1-cont">
+                        <img src="powerbank.jpg">
+                        <h3>Earphone</h3>
+                        <p>From- 499/-</p>
+                    </div>
+                </div>
+                <div class="Products1">
+                    <div class="Products1-cont">
+                        <img src="th (23).jpg">
+                        <h3>mobile</h3>
+                        <p>from- 7999/-</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       <!----> 
+        <div id="orderdiv">
+            
+            
+                <div class="orderdiv1">
+                    <img src="home.png">
+                </div>
+                <div class="orderdiv1">
+                    <img src="order.png">
+                </div>
+                <div class="orderdiv1">
+                    <img src="transation.png">
+                </div>
+                <div class="orderdiv1">
+                    <img src="tracking.png">
+                </div>
+          
+        </div>
+    </section>  
+    
+    <!--second section part start-->
+    <section id="section-2">
+        <h1 style="font-family: 'EB Garamond', serif; color: rgb(212, 242, 250); text-shadow: 1px 2px 5px black;">Best Products</h1>
+        <div id="sec2-container">
+            <div class="sec2-part-1 sec2-on-1">
+                <header class="sec2-header1">
+                     <div class="pro-name">Smart Phone</div>
+                    <div class="see-more"><a>See More >></a> </div>
+                </header>
+                <div id="product-1">
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone" src="th (25).jpg" width="50%"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>Upto 50% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="th (27).jpg" width="50%"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>Up to 80% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="th (28).jpg" width="50%"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>Under 9900</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="th (29).jpg" width="90%"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="th (30).jpg" width="90%"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone" width="90%"src="th (32).jpg"></center>
+                        <div class="detail">
+                            <p>Vivo  Y21</p>
+                            <p>30-60% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                       <center class="product-img-cent"><img class="smart-phone"src="th (26).jpg" width="90%"></center> 
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
+            <div class="sec2-part-2 sec2-on-1" >
+                <header class="sec2-header1">
+                    <div class="pro-name">Memory Cord </div>
+                    <div class="see-more"><a>See More >></a> </div>
+                </header>
+                <div id="product-1">
+                    <div class="product">
+                        <img  class="smart-p"src="th (10).jpg">
+                        <div class="detail">
+                            <p>Philips 11000 Mah</p>
+                            <p>Upto 50% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product" >
+                        <img  class="smart-p"src="th (11).jpg">
+                        <div class="detail">
+                            <p>Intex 10000 Mah</p>
+                            <p>Under 900</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img  class="smart-p"src="th (6).jpg">
+                        <div class="detail">
+                            <p>Quantum 10000 Mah</p>
+                            <p>30-60% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p"src="th (9).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (8).jpg">
+                        <div class="detail">
+                            <p>Ambrane 10000 Mah.</p>
+                            <p>Upto 50% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (7).jpg">
+                        <div class="detail">
+                            <p>Quantum 10000 Mah</p>
+                            <p>30-60% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (9).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-3">
+        <div id="sec3-container">
+            <div class="sec2-part-1 sec3-part1">
+                <header class="sec2-header1">
+                    <div class="pro-name">Earphone</div>
+                    <div class="see-more"><a>See More >></a> </div>
+                </header>
+                <div id="product-1">
+                    <div class="product">
+                        <img  class="smart-p"src="th (12).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product" >
+                        <img class="smart-p" src="th (13).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (16).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (15).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (14).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (17).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (12).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec2-part-2 sec3-part1" >
+                <header class="sec2-header1">
+                    <div class="pro-name">Tempard Glass</div>
+                    <div class="see-more"><a>See More >></a> </div>
+                </header>
+                <div id="product-1">
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="tempard-1.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="tempard-1.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="tempard-2.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"> <img class="smart-phone"src="tempard-3.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="tempard-4.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"> <img class="smart-phone"src="tempard-5.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <center class="product-img-cent"><img class="smart-phone"src="tempard-1.jpg"></center>
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-4">
+        <div id="sec3-container">
+            <div class="sec2-part-1 sec3-part1">
+                <header class="sec2-header1">
+                    <div class="pro-name">SIM Card</div>
+                    <div class="see-more"><a>See More >></a> </div>
+                </header>
+                <div id="product-1">
+                    <div class="product">
+                        <img class="smart-p" src="airtel.png">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product" >
+                        <img class="smart-p" src="jio.png">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (20).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="th (18).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p"src="th (22).jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="bsnl-png.png">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img class="smart-p" src="chat.jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec2-part-2 sec3-part1" >
+                <header class="sec2-header1">
+                    <div class="pro-name">Powerbank </div>
+                    <div class="see-more"><a>See More >></a> </div>
+                </header>
+                <div id="product-1">
+                    <div class="product">
+                        <img  class="smart-p"src="th (1).jpg">
+                        <div class="detail">
+                            <p>Philips 11000 Mah</p>
+                            <p>Upto 50% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product" >
+                        <img  class="smart-p"src="th (2).jpg">
+                        <div class="detail">
+                            <p>Intex 10000 Mah</p>
+                            <p>Under 900</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img  class="smart-p"src="th (3).jpg">
+                        <div class="detail">
+                            <p>Quantum 10000 Mah</p>
+                            <p>30-60% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img  class="smart-p"src="th.jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img  class="smart-p"src="th (5).jpg">
+                        <div class="detail">
+                            <p>Ambrane 10000 Mah.</p>
+                            <p>Upto 50% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img  class="smart-p"src="th (3).jpg">
+                        <div class="detail">
+                            <p>Quantum 10000 Mah</p>
+                            <p>30-60% Off</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img  class="smart-p"src="th.jpg">
+                        <div class="detail">
+                            <p>Mi 30000 Mah</p>
+                            <p>From 149</p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+</html> 
